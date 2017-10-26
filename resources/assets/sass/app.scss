@@ -5,13 +5,12 @@
 // Variables
 @import "variables";
 
-// Bulma
-@import "node_modules/bulma/bulma";
-
-// Bulma
-@import "node_modules/buefy/src/scss/buefy";
 
 // Font Awesome
 @import "node_modules/font-awesome/scss/font-awesome";
 
+@import 'helpers';
 
+@import 'overrides';
+
+@import 'general';
