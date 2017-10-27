@@ -15,10 +15,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @include('_incluir.adminis.nav')
     <div id="app">
-        @include('_incluir.adminis.lateral')
+        <div class="columns">
+            @include('_incluir.adminis.lateral')
 
-        @yield('content')
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->

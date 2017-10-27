@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('adminis')->group(function(){
+Route::prefix('adminis')->middleware('role:superadministrator|administrator|autor|editor')->group(function(){
+	Route::get('/','AdminisController@home')->name('adminis');
 	Route::get('/adminpanel','AdminisController@adminpanel')->name('adminis.adminpanel');
+	Route::resource('/users', 'UserController');
 });
